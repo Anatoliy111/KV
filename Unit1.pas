@@ -2688,6 +2688,16 @@ begin
         obor.Next;
       end;
 
+      ed_uder.Filter:='schet='''+schet+'''';
+      ed_uder.Filtered:=true;
+      ed_uder.First;
+      while (not ed_uder.Eof) and (ed_uder.fieldbyname('schet').asstring=schet) do
+      begin
+        cxCalcEdit78.Value := cxCalcEdit78.Value+ed_uder.fieldbyname('sum').AsCurrency;
+        //cxDateEdit2.Date := '';//opl.fieldbyname('dt').AsDateTime;
+        ed_uder.Next;
+      end;
+
       opl.Filter:='schet='''+schet+'''';
       opl.Filtered:=true;
       opl.First;
@@ -2697,6 +2707,9 @@ begin
         cxDateEdit2.Date := opl.fieldbyname('dt').AsDateTime;
         opl.Next;
       end;
+
+
+
       h_voda.Filter:='schet='''+schet+'''';
       h_voda.Filtered:=true;
       h_voda.First;

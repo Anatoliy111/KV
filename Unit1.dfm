@@ -830,7 +830,7 @@ object Form1: TForm1
         Height = 21
         DataField = 'NOTE2'
         DataSource = subsSource
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 31
       end
       object DBComboBox2: TDBComboBox
@@ -840,7 +840,7 @@ object Form1: TForm1
         Height = 21
         DataField = 'NOTE3'
         DataSource = subsSource
-        ItemHeight = 0
+        ItemHeight = 13
         TabOrder = 44
       end
       object DBEdit25: TDBEdit
@@ -1593,9 +1593,6 @@ object Form1: TForm1
       Caption = #1044#1086#1074#1110#1076#1082#1072' '#1087#1088#1086' '#1079#1072#1073#1086#1088#1075#1086#1074#1072#1085#1110#1089#1090#1100' 2004,2005'
       ImageIndex = 1
       OnShow = TabSheet2Show
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel1: TPanel
         Left = 0
         Top = 57
@@ -1969,9 +1966,6 @@ object Form1: TForm1
     object TabSheet3: TcxTabSheet
       Caption = #1057#1090#1072#1090#1080#1089#1090#1080#1082#1072
       ImageIndex = 2
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label31: TLabel
         Left = 24
         Top = 120
