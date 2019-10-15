@@ -2664,26 +2664,59 @@ begin
           cxCalcEdit85.Value:=0;
           cxCalcEdit86.Value:=0;
 
+          cxCalcEdit74.enabled:=false;
+          cxCalcEdit75.enabled:=false;
+          cxCalcEdit76.enabled:=false;
+          cxCalcEdit77.enabled:=false;
+          cxCalcEdit83.enabled:=false;
+          cxCalcEdit84.enabled:=false;
+          cxCalcEdit85.enabled:=false;
+          cxCalcEdit86.enabled:=false;
+
 
 
       while (not obor.Eof) and (obor.fieldbyname('schet').asstring=schet) do
       begin
         if ww(obor.FieldByName('wid').AsString)='ot' then
+        begin
           cxCalcEdit74.Value:=cxCalcEdit74.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit74.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='om' then
+        begin
           cxCalcEdit75.Value:=cxCalcEdit75.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit75.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='ub' then
+        begin
           cxCalcEdit76.Value:=cxCalcEdit76.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit76.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='sn' then
+        begin
           cxCalcEdit77.Value:=cxCalcEdit77.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit77.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='kv' then
+        begin
           cxCalcEdit83.Value:=cxCalcEdit83.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit83.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='hv' then
+        begin
           cxCalcEdit84.Value:=cxCalcEdit84.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit84.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='sm' then
+        begin
           cxCalcEdit85.Value:=cxCalcEdit85.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit85.enabled:=true;
+        end;
         if ww(obor.FieldByName('wid').AsString)='el' then
+        begin
           cxCalcEdit86.Value:=cxCalcEdit86.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit86.enabled:=true;
+        end;
 
         obor.Next;
       end;
@@ -2780,21 +2813,21 @@ begin
 
   frxReport6.Variables['dolg_dt']:=''''+date2str(cxDateEdit1.Date,'dd.mm.yyyy')+'''';
 
-  if cxCalcEdit74.EditValue<>0 then
+  if cxCalcEdit74.Enabled then
      repp(cxCalcEdit74.text,dxLayoutControl1Item17.caption);
-  if cxCalcEdit75.EditValue<>0 then
+  if cxCalcEdit75.Enabled then
      repp(cxCalcEdit75.text,dxLayoutControl1Item18.caption);
-  if cxCalcEdit76.EditValue<>0 then
+  if cxCalcEdit76.Enabled then
      repp(cxCalcEdit76.text,dxLayoutControl1Item19.caption);
-  if cxCalcEdit77.EditValue<>0 then
+  if cxCalcEdit77.Enabled then
      repp(cxCalcEdit77.text,dxLayoutControl1Item20.caption);
-  if cxCalcEdit83.EditValue<>0 then
+  if cxCalcEdit83.Enabled then
      repp(cxCalcEdit83.text,dxLayoutControl1Item29.caption);
-  if cxCalcEdit84.EditValue<>0 then
+  if cxCalcEdit84.Enabled then
      repp(cxCalcEdit84.text,dxLayoutControl1Item31.caption);
-  if cxCalcEdit85.EditValue<>0 then
+  if cxCalcEdit85.Enabled then
      repp(cxCalcEdit85.text,dxLayoutControl1Item34.caption);
-  if cxCalcEdit86.EditValue<>0 then
+  if cxCalcEdit86.Enabled then
      repp(cxCalcEdit86.text,dxLayoutControl1Item35.caption);
 
   frxReport6.Variables['dolg1']:=''''+dolgss[1]+'''';
