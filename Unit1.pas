@@ -421,9 +421,7 @@ type
     dxLayoutControl1Item12: TdxLayoutItem;
     dxLayoutControl1Group5: TdxLayoutGroup;
     cxLabel5: TcxLabel;
-    dxLayoutControl1Item15: TdxLayoutItem;
     dxLayoutControl1Group7: TdxLayoutGroup;
-    dxLayoutControl1Group8: TdxLayoutGroup;
     cxCalcEdit73: TcxCalcEdit;
     dxLayoutControl1Item16: TdxLayoutItem;
     cxCalcEdit74: TcxCalcEdit;
@@ -596,6 +594,10 @@ type
     widsFL_GROPL: TSmallintField;
     widsFL_SUBS: TSmallintField;
     widsVAL: TFloatField;
+    dxLayoutControl1Item32: TdxLayoutItem;
+    cxCalcEdit87: TcxCalcEdit;
+    dxLayoutControl1Item33: TdxLayoutItem;
+    cxCalcEdit88: TcxCalcEdit;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ListBox1MouseUp(Sender: TObject; Button: TMouseButton;
@@ -693,8 +695,8 @@ var LEN_DOM:integer=5;
 const Rubez=10;     // День перехода долга
 const MAX_DATES=125;
 var dates:array[0..MAX_DATES] of integer;
-var dolgss : array[1..8] of string;
-var nposss : array[1..8] of string;
+var dolgss : array[1..10] of string;
+var nposss : array[1..10] of string;
 const mmm:array[1..12] of string=(
   'Січень',
   'Лютий',
@@ -721,8 +723,14 @@ uses StrUtils, Unit2, mytools, Unit3, Unit4, Unit5, Unit6, Unit7, Unit9, Unit10,
 function ww(wid:string):string;
 begin
   result:=wid;
-  if (LeftStr(wid,1)='o') then
+ // if (LeftStr(wid,1)='o') then
+ //   result:='ot';
+  if (wid='ot') then
     result:='ot';
+  if (wid='ov') then
+    result:='ov';
+  if (wid='op') then
+    result:='op';
   if (wid='om') then
     result:='om';
   if (wid='hv') or (wid='h3') then
@@ -1479,6 +1487,10 @@ begin
             dxLayoutControl1Item34.Caption:=dos2win(widsNAIM.Value);
         if wids.FieldByName('wid').AsString='el' then
             dxLayoutControl1Item35.Caption:=dos2win(widsNAIM.Value);
+        if wids.FieldByName('wid').AsString='op' then
+            dxLayoutControl1Item32.Caption:=dos2win(widsNAIM.Value);
+        if wids.FieldByName('wid').AsString='ov' then
+            dxLayoutControl1Item33.Caption:=dos2win(widsNAIM.Value);
 
         wids.Next;
       end;
@@ -2663,6 +2675,8 @@ begin
           cxCalcEdit84.Value:=0;
           cxCalcEdit85.Value:=0;
           cxCalcEdit86.Value:=0;
+          cxCalcEdit87.Value:=0;
+          cxCalcEdit88.Value:=0;
 
           cxCalcEdit74.enabled:=false;
           cxCalcEdit75.enabled:=false;
@@ -2672,6 +2686,8 @@ begin
           cxCalcEdit84.enabled:=false;
           cxCalcEdit85.enabled:=false;
           cxCalcEdit86.enabled:=false;
+          cxCalcEdit87.enabled:=false;
+          cxCalcEdit88.enabled:=false;
 
 
 
@@ -2716,6 +2732,16 @@ begin
         begin
           cxCalcEdit86.Value:=cxCalcEdit86.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit86.enabled:=true;
+        end;
+                if ww(obor.FieldByName('wid').AsString)='op' then
+        begin
+          cxCalcEdit87.Value:=cxCalcEdit87.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit87.enabled:=true;
+        end;
+                if ww(obor.FieldByName('wid').AsString)='ov' then
+        begin
+          cxCalcEdit88.Value:=cxCalcEdit88.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit88.enabled:=true;
         end;
 
         obor.Next;
@@ -2764,7 +2790,7 @@ end;
 procedure TForm1.repp(dolg,npos:string);
 var i:integer;
 begin
-  for I := 1 to 8 do
+  for I := 1 to 10 do
   begin
     if dolgss[i]='' then
     begin
@@ -2829,6 +2855,10 @@ begin
      repp(cxCalcEdit85.text,dxLayoutControl1Item34.caption);
   if cxCalcEdit86.Enabled then
      repp(cxCalcEdit86.text,dxLayoutControl1Item35.caption);
+  if cxCalcEdit87.Enabled then
+     repp(cxCalcEdit87.text,dxLayoutControl1Item32.caption);
+  if cxCalcEdit88.Enabled then
+     repp(cxCalcEdit88.text,dxLayoutControl1Item33.caption);
 
   frxReport6.Variables['dolg1']:=''''+dolgss[1]+'''';
   frxReport6.Variables['dolg2']:=''''+dolgss[2]+'''';
@@ -2838,6 +2868,8 @@ begin
   frxReport6.Variables['dolg6']:=''''+dolgss[6]+'''';
   frxReport6.Variables['dolg7']:=''''+dolgss[7]+'''';
   frxReport6.Variables['dolg8']:=''''+dolgss[8]+'''';
+  frxReport6.Variables['dolg9']:=''''+dolgss[9]+'''';
+  frxReport6.Variables['dolg10']:=''''+dolgss[10]+'''';
 
   frxReport6.Variables['name1']:=''''+nposss[1]+'''';
   frxReport6.Variables['name2']:=''''+nposss[2]+'''';
@@ -2847,6 +2879,8 @@ begin
   frxReport6.Variables['name6']:=''''+nposss[6]+'''';
   frxReport6.Variables['name7']:=''''+nposss[7]+'''';
   frxReport6.Variables['name8']:=''''+nposss[8]+'''';
+  frxReport6.Variables['name9']:=''''+nposss[9]+'''';
+  frxReport6.Variables['name10']:=''''+nposss[10]+'''';
 
 
 
@@ -2959,7 +2993,8 @@ begin
   cxCalcEdit79.Value := cxCalcEdit73.Value + cxCalcEdit74.Value +
                         cxCalcEdit75.Value + cxCalcEdit76.Value +
                         cxCalcEdit77.Value + cxCalcEdit83.Value +
-                        cxCalcEdit84.Value + cxCalcEdit85.Value + cxCalcEdit86.Value;
+                        cxCalcEdit84.Value + cxCalcEdit85.Value +
+                        cxCalcEdit86.Value + cxCalcEdit87.Value + cxCalcEdit88.Value;
 end;
 
 procedure TForm1.cxButton4Click(Sender: TObject);

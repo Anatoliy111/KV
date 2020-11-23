@@ -974,7 +974,7 @@ object Form1: TForm1
         TabStop = False
         object cxTextEdit2: TcxTextEdit
           Left = 10
-          Top = 24
+          Top = 37
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -983,7 +983,7 @@ object Form1: TForm1
         end
         object cxTextEdit3: TcxTextEdit
           Left = 10
-          Top = 51
+          Top = 64
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -992,7 +992,7 @@ object Form1: TForm1
         end
         object cxTextEdit4: TcxTextEdit
           Left = 322
-          Top = 51
+          Top = 64
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -1001,7 +1001,7 @@ object Form1: TForm1
         end
         object cxSpinEdit1: TcxSpinEdit
           Left = 10
-          Top = 78
+          Top = 91
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -1011,7 +1011,7 @@ object Form1: TForm1
         end
         object cxCalcEdit72: TcxCalcEdit
           Left = 67
-          Top = 78
+          Top = 91
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '#####.00'
@@ -1025,7 +1025,7 @@ object Form1: TForm1
         end
         object cxSpinEdit2: TcxSpinEdit
           Left = 10
-          Top = 105
+          Top = 118
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -1035,7 +1035,7 @@ object Form1: TForm1
         end
         object cxDateEdit1: TcxDateEdit
           Left = 10
-          Top = 132
+          Top = 145
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -1046,31 +1046,31 @@ object Form1: TForm1
         end
         object cxLabel1: TcxLabel
           Left = 137
-          Top = 132
+          Top = 145
           Caption = #1089#1082#1083#1072#1076#1072#1108
           Style.HotTrack = False
         end
         object cxLabel2: TcxLabel
           Left = 127
-          Top = 78
+          Top = 91
           Caption = #1084'.'#1082#1074'.'
           Style.HotTrack = False
         end
         object cxLabel3: TcxLabel
           Left = 116
-          Top = 105
+          Top = 118
           Caption = #1095#1086#1083#1086#1074#1110#1082
           Style.HotTrack = False
         end
         object cxLabel5: TcxLabel
-          Left = 10
-          Top = 186
+          Left = 0
+          Top = 0
           Caption = #1074' '#1090'.'#1095'.'
           Style.HotTrack = False
         end
         object cxCalcEdit73: TcxCalcEdit
           Left = 22
-          Top = 227
+          Top = 217
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1081,12 +1081,27 @@ object Form1: TForm1
           Style.Shadow = False
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 15
+          TabOrder = 14
           Width = 140
         end
         object cxCalcEdit74: TcxCalcEdit
           Left = 22
-          Top = 254
+          Top = 244
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
+          Properties.OnChange = cxCalcEdit73PropertiesChange
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = True
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 16
+          Width = 241
+        end
+        object cxCalcEdit75: TcxCalcEdit
+          Left = 22
+          Top = 271
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1099,9 +1114,9 @@ object Form1: TForm1
           TabOrder = 17
           Width = 241
         end
-        object cxCalcEdit75: TcxCalcEdit
+        object cxCalcEdit76: TcxCalcEdit
           Left = 22
-          Top = 281
+          Top = 298
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1114,9 +1129,9 @@ object Form1: TForm1
           TabOrder = 18
           Width = 241
         end
-        object cxCalcEdit76: TcxCalcEdit
+        object cxCalcEdit77: TcxCalcEdit
           Left = 22
-          Top = 308
+          Top = 325
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1129,24 +1144,23 @@ object Form1: TForm1
           TabOrder = 19
           Width = 241
         end
-        object cxCalcEdit77: TcxCalcEdit
-          Left = 22
-          Top = 335
-          EditValue = 0.000000000000000000
-          Properties.Alignment.Horz = taRightJustify
-          Properties.DisplayFormat = '0.00'
-          Properties.OnChange = cxCalcEdit73PropertiesChange
+        object cxDateEdit2: TcxDateEdit
+          Left = 10
+          Top = 526
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 20
-          Width = 241
+          TabOrder = 31
+          Width = 121
         end
-        object cxDateEdit2: TcxDateEdit
-          Left = 10
-          Top = 482
+        object cxCalcEdit78: TcxCalcEdit
+          Left = 528
+          Top = 10
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
@@ -1155,23 +1169,9 @@ object Form1: TForm1
           TabOrder = 30
           Width = 121
         end
-        object cxCalcEdit78: TcxCalcEdit
-          Left = 528
-          Top = -3
-          EditValue = 0.000000000000000000
-          Properties.Alignment.Horz = taRightJustify
-          Properties.DisplayFormat = '0.00'
-          Style.BorderColor = clWindowFrame
-          Style.BorderStyle = ebs3D
-          Style.HotTrack = True
-          Style.ButtonStyle = bts3D
-          Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 29
-          Width = 121
-        end
         object cxCalcEdit79: TcxCalcEdit
           Left = 165
-          Top = 159
+          Top = 172
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1185,18 +1185,18 @@ object Form1: TForm1
         end
         object cxButton1: TcxButton
           Left = 448
-          Top = -3
+          Top = 10
           Width = 74
           Height = 25
           Caption = #1042#1080#1073#1088#1072#1090#1080
           Default = True
-          TabOrder = 25
+          TabOrder = 26
           OnClick = cxButton1Click
           LookAndFeel.Kind = lfStandard
         end
         object cxMRUEdit1: TcxMRUEdit
           Left = 306
-          Top = -3
+          Top = 10
           ParentFont = False
           Properties.DropDownRows = 15
           Properties.ShowEllipsis = False
@@ -1212,37 +1212,37 @@ object Form1: TForm1
         end
         object cxButton2: TcxButton
           Left = 448
-          Top = 60
+          Top = 73
           Width = 74
           Height = 25
           Caption = #1055#1077#1088#1077#1075#1083#1103#1076
-          TabOrder = 27
+          TabOrder = 28
           OnClick = cxButton2Click
           LookAndFeel.Kind = lfStandard
         end
         object cxButton3: TcxButton
           Left = 448
-          Top = 91
+          Top = 104
           Width = 74
           Height = 26
           Caption = #1044#1080#1079#1072#1081#1085#1077#1088
-          TabOrder = 28
+          TabOrder = 29
           OnClick = cxButton3Click
           LookAndFeel.Kind = lfStandard
         end
         object cxButton4: TcxButton
           Left = 448
-          Top = 28
+          Top = 41
           Width = 74
           Height = 26
           Caption = #1044#1088#1091#1082
-          TabOrder = 26
+          TabOrder = 27
           OnClick = cxButton4Click
           LookAndFeel.Kind = lfStandard
         end
         object BuhgEdit1: TcxMRUEdit
           Left = 10
-          Top = 509
+          Top = 553
           AutoSize = False
           Properties.DropDownRows = 16
           Properties.ShowEllipsis = False
@@ -1251,13 +1251,13 @@ object Form1: TForm1
           Style.HotTrack = False
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 31
+          TabOrder = 32
           Height = 21
           Width = 177
         end
         object cxCalcEdit80: TcxCalcEdit
           Left = 163
-          Top = 78
+          Top = 91
           EditValue = 0.000000000000000000
           Properties.DisplayFormat = '#####.00'
           Style.BorderColor = clWindowFrame
@@ -1270,19 +1270,19 @@ object Form1: TForm1
         end
         object cxCalcEdit81: TcxCalcEdit
           Left = 168
-          Top = 227
+          Top = 217
           EditValue = 0.000000000000000000
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = False
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 16
+          TabOrder = 15
           Width = 76
         end
         object cxComboBox2: TcxComboBox
           Left = 10
-          Top = -3
+          Top = 10
           Properties.DropDownListStyle = lsFixedList
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
@@ -1294,7 +1294,7 @@ object Form1: TForm1
         end
         object KerEdit1: TcxMRUEdit
           Left = 10
-          Top = 536
+          Top = 580
           Properties.DropDownRows = 16
           Properties.ShowEllipsis = False
           Style.BorderColor = clWindowFrame
@@ -1302,12 +1302,27 @@ object Form1: TForm1
           Style.HotTrack = False
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 32
+          TabOrder = 33
           Width = 177
         end
         object cxCalcEdit83: TcxCalcEdit
           Left = 22
-          Top = 362
+          Top = 352
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
+          Properties.OnChange = cxCalcEdit73PropertiesChange
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 20
+          Width = 241
+        end
+        object cxCalcEdit84: TcxCalcEdit
+          Left = 22
+          Top = 379
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1318,11 +1333,11 @@ object Form1: TForm1
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
           TabOrder = 21
-          Width = 241
+          Width = 235
         end
-        object cxCalcEdit84: TcxCalcEdit
+        object cxCalcEdit85: TcxCalcEdit
           Left = 22
-          Top = 389
+          Top = 406
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1333,11 +1348,11 @@ object Form1: TForm1
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
           TabOrder = 22
-          Width = 235
+          Width = 408
         end
-        object cxCalcEdit85: TcxCalcEdit
+        object cxCalcEdit86: TcxCalcEdit
           Left = 22
-          Top = 416
+          Top = 433
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1350,9 +1365,9 @@ object Form1: TForm1
           TabOrder = 23
           Width = 408
         end
-        object cxCalcEdit86: TcxCalcEdit
+        object cxCalcEdit87: TcxCalcEdit
           Left = 22
-          Top = 443
+          Top = 460
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
           Properties.DisplayFormat = '0.00'
@@ -1363,6 +1378,21 @@ object Form1: TForm1
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
           TabOrder = 24
+          Width = 408
+        end
+        object cxCalcEdit88: TcxCalcEdit
+          Left = 22
+          Top = 487
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
+          Properties.OnChange = cxCalcEdit73PropertiesChange
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 25
           Width = 408
         end
         object dxLayoutControl1Group_Root: TdxLayoutGroup
@@ -1480,61 +1510,60 @@ object Form1: TForm1
                   Control = cxCalcEdit79
                   ControlOptions.ShowBorder = False
                 end
-                object dxLayoutControl1Group8: TdxLayoutGroup
-                  ShowCaption = False
-                  Hidden = True
-                  ShowBorder = False
-                  object dxLayoutControl1Item15: TdxLayoutItem
-                    Control = cxLabel5
+                object dxLayoutControl1Group7: TdxLayoutGroup
+                  object dxLayoutControl1Group11: TdxLayoutGroup
+                    ShowCaption = False
+                    Hidden = True
+                    LayoutDirection = ldHorizontal
+                    ShowBorder = False
+                    object dxLayoutControl1Item16: TdxLayoutItem
+                      Control = cxCalcEdit73
+                      ControlOptions.ShowBorder = False
+                    end
+                    object dxLayoutControl1Item27: TdxLayoutItem
+                      Control = cxCalcEdit81
+                      ControlOptions.ShowBorder = False
+                    end
+                  end
+                  object dxLayoutControl1Item17: TdxLayoutItem
+                    Control = cxCalcEdit74
                     ControlOptions.ShowBorder = False
                   end
-                  object dxLayoutControl1Group7: TdxLayoutGroup
-                    object dxLayoutControl1Group11: TdxLayoutGroup
-                      ShowCaption = False
-                      Hidden = True
-                      LayoutDirection = ldHorizontal
-                      ShowBorder = False
-                      object dxLayoutControl1Item16: TdxLayoutItem
-                        Control = cxCalcEdit73
-                        ControlOptions.ShowBorder = False
-                      end
-                      object dxLayoutControl1Item27: TdxLayoutItem
-                        Control = cxCalcEdit81
-                        ControlOptions.ShowBorder = False
-                      end
-                    end
-                    object dxLayoutControl1Item17: TdxLayoutItem
-                      Control = cxCalcEdit74
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item18: TdxLayoutItem
-                      Control = cxCalcEdit75
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item19: TdxLayoutItem
-                      Control = cxCalcEdit76
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item20: TdxLayoutItem
-                      Control = cxCalcEdit77
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item29: TdxLayoutItem
-                      Control = cxCalcEdit83
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item31: TdxLayoutItem
-                      Control = cxCalcEdit84
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item34: TdxLayoutItem
-                      Control = cxCalcEdit85
-                      ControlOptions.ShowBorder = False
-                    end
-                    object dxLayoutControl1Item35: TdxLayoutItem
-                      Control = cxCalcEdit86
-                      ControlOptions.ShowBorder = False
-                    end
+                  object dxLayoutControl1Item18: TdxLayoutItem
+                    Control = cxCalcEdit75
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item19: TdxLayoutItem
+                    Control = cxCalcEdit76
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item20: TdxLayoutItem
+                    Control = cxCalcEdit77
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item29: TdxLayoutItem
+                    Control = cxCalcEdit83
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item31: TdxLayoutItem
+                    Control = cxCalcEdit84
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item34: TdxLayoutItem
+                    Control = cxCalcEdit85
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item35: TdxLayoutItem
+                    Control = cxCalcEdit86
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item32: TdxLayoutItem
+                    Control = cxCalcEdit87
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item33: TdxLayoutItem
+                    Control = cxCalcEdit88
+                    ControlOptions.ShowBorder = False
                   end
                 end
               end
