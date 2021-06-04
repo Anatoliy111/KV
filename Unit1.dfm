@@ -5409,6 +5409,7 @@ object Form1: TForm1
     Top = 228
   end
   object obor: TTable
+    Active = True
     DatabaseName = 'd:\share\kvpl\dbf'
     TableName = 'OBOR.DBF'
     Left = 120
@@ -16843,7 +16844,8 @@ object Form1: TForm1
     Top = 216
   end
   object subss: TTable
-    DatabaseName = 'd:\share\kvpl\dbf'
+    Active = True
+    DatabaseName = 'k:\kvpl\dbf\'
     ReadOnly = True
     TableName = 'SUBS.DBF'
     Left = 120
@@ -16966,5 +16968,12 @@ object Form1: TForm1
     object widsVAL: TFloatField
       FieldName = 'VAL'
     end
+  end
+  object slgot: TTable
+    DatabaseName = 'k:\kvpl\dbf\'
+    ReadOnly = True
+    TableName = 'SLGOT.DBF'
+    Left = 152
+    Top = 360
   end
 end

@@ -598,6 +598,7 @@ type
     cxCalcEdit87: TcxCalcEdit;
     dxLayoutControl1Item33: TdxLayoutItem;
     cxCalcEdit88: TcxCalcEdit;
+    slgot: TTable;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ListBox1MouseUp(Sender: TObject; Button: TMouseButton;
@@ -970,7 +971,8 @@ begin
   openTbl(dolgs,path);
   openTbl(ed_uder,path);
   openTbl(uder,path);
-//  openTbl(wids,path);
+  openTbl(wids,path);
+  openTbl(slgot,path);
 end;
 
 procedure TForm1.closedata;
@@ -2756,6 +2758,54 @@ begin
         //cxDateEdit2.Date := '';//opl.fieldbyname('dt').AsDateTime;
         ed_uder.Next;
       end;
+
+      subss.Filter:='schet='''+schet+'''';
+      subss.Filtered:=true;
+      subss.First;
+
+   //   wids.Filter:='fl_nonach=0';
+     // wids.Filtered:=true;
+      wids.first;
+      while (not subss.Eof) and (subss.fieldbyname('schet').asstring=schet) do
+      begin
+          while (not wids.Eof) do
+          begin
+
+            cxCalcEdit78.Value := cxCalcEdit78.Value+subss.fieldbyname('s_'+wids.FieldByName('wid').AsString).AsCurrency;
+        //cxDateEdit2.Date := '';//opl.fieldbyname('dt').AsDateTime;
+          wids.Next;
+          end;
+          subss.Next;
+      end;
+
+            slgot.Filter:='schet='''+schet+'''';
+      slgot.Filtered:=true;
+      slgot.First;
+
+      wids.first;
+      while (not slgot.Eof) and (slgot.fieldbyname('schet').asstring=schet) do
+      begin
+          while (not wids.Eof) do
+          begin
+
+            cxCalcEdit78.Value := cxCalcEdit78.Value+slgot.fieldbyname('s_'+wids.FieldByName('wid').AsString).AsCurrency;
+        //cxDateEdit2.Date := '';//opl.fieldbyname('dt').AsDateTime;
+          wids.Next;
+          end;
+          slgot.Next;
+      end;
+
+
+
+      //wids.Filtered:=false;
+
+      while (not ed_uder.Eof) and (ed_uder.fieldbyname('schet').asstring=schet) do
+      begin
+        cxCalcEdit78.Value := cxCalcEdit78.Value+ed_uder.fieldbyname('sum').AsCurrency;
+        //cxDateEdit2.Date := '';//opl.fieldbyname('dt').AsDateTime;
+        ed_uder.Next;
+      end;
+
 
       opl.Filter:='schet='''+schet+'''';
       opl.Filtered:=true;
