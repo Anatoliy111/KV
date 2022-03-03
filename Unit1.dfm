@@ -5409,7 +5409,6 @@ object Form1: TForm1
     Top = 228
   end
   object obor: TTable
-    Active = True
     DatabaseName = 'd:\share\kvpl\dbf'
     TableName = 'OBOR.DBF'
     Left = 120
@@ -16844,7 +16843,6 @@ object Form1: TForm1
     Top = 216
   end
   object subss: TTable
-    Active = True
     DatabaseName = 'k:\kvpl\dbf\'
     ReadOnly = True
     TableName = 'SUBS.DBF'
