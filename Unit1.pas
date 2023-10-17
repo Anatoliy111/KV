@@ -599,6 +599,10 @@ type
     dxLayoutControl1Item33: TdxLayoutItem;
     cxCalcEdit88: TcxCalcEdit;
     slgot: TTable;
+    dxLayoutControl1Item15: TdxLayoutItem;
+    cxCalcEdit89: TcxCalcEdit;
+    dxLayoutControl1Item36: TdxLayoutItem;
+    cxCalcEdit91: TcxCalcEdit;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ListBox1MouseUp(Sender: TObject; Button: TMouseButton;
@@ -728,12 +732,16 @@ begin
  //   result:='ot';
   if (wid='ot') then
     result:='ot';
+  if (wid='as') then
+    result:='as';
   if (wid='ov') then
     result:='ov';
   if (wid='op') then
     result:='op';
   if (wid='om') then
     result:='om';
+  if (wid='av') then
+    result:='av';
   if (wid='hv') or (wid='h3') then
     result:='hv';
   if (wid='an') or (wid='a3') then
@@ -1481,18 +1489,22 @@ begin
             dxLayoutControl1Item19.Caption:=dos2win(widsNAIM.Value);
         if wids.FieldByName('wid').AsString='sn' then
             dxLayoutControl1Item20.Caption:=dos2win(widsNAIM.Value);
-        if wids.FieldByName('wid').AsString='kv' then
+        if wids.FieldByName('wid').AsString='as' then
             dxLayoutControl1Item29.Caption:=dos2win(widsNAIM.Value);
-        if wids.FieldByName('wid').AsString='hv' then
+        if wids.FieldByName('wid').AsString='kv' then
             dxLayoutControl1Item31.Caption:=dos2win(widsNAIM.Value);
-        if wids.FieldByName('wid').AsString='sm' then
+        if wids.FieldByName('wid').AsString='av' then
             dxLayoutControl1Item34.Caption:=dos2win(widsNAIM.Value);
-        if wids.FieldByName('wid').AsString='el' then
+        if wids.FieldByName('wid').AsString='sm' then
             dxLayoutControl1Item35.Caption:=dos2win(widsNAIM.Value);
-        if wids.FieldByName('wid').AsString='op' then
+        if wids.FieldByName('wid').AsString='el' then
             dxLayoutControl1Item32.Caption:=dos2win(widsNAIM.Value);
-        if wids.FieldByName('wid').AsString='ov' then
+        if wids.FieldByName('wid').AsString='op' then
             dxLayoutControl1Item33.Caption:=dos2win(widsNAIM.Value);
+        if wids.FieldByName('wid').AsString='hv' then
+            dxLayoutControl1Item15.Caption:=dos2win(widsNAIM.Value);
+        if wids.FieldByName('wid').AsString='ov' then
+            dxLayoutControl1Item36.Caption:=dos2win(widsNAIM.Value);
 
         wids.Next;
       end;
@@ -2615,6 +2627,8 @@ begin
   cxCalcEdit81.Value:=0;
   cxCalcEdit83.Value:=0;
   cxCalcEdit84.Value:=0;
+  cxCalcEdit89.Value:=0;
+  cxCalcEdit91.Value:=0;
 
   cxDateEdit1.Clear;
   cxDateEdit2.Clear;
@@ -2679,6 +2693,8 @@ begin
           cxCalcEdit86.Value:=0;
           cxCalcEdit87.Value:=0;
           cxCalcEdit88.Value:=0;
+          cxCalcEdit89.Value:=0;
+          cxCalcEdit91.Value:=0;
 
           cxCalcEdit74.enabled:=false;
           cxCalcEdit75.enabled:=false;
@@ -2690,8 +2706,8 @@ begin
           cxCalcEdit86.enabled:=false;
           cxCalcEdit87.enabled:=false;
           cxCalcEdit88.enabled:=false;
-
-
+          cxCalcEdit89.enabled:=false;
+          cxCalcEdit91.enabled:=false;
 
       while (not obor.Eof) and (obor.fieldbyname('schet').asstring=schet) do
       begin
@@ -2715,35 +2731,46 @@ begin
           cxCalcEdit77.Value:=cxCalcEdit77.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit77.enabled:=true;
         end;
-        if ww(obor.FieldByName('wid').AsString)='kv' then
+        if ww(obor.FieldByName('wid').AsString)='as' then
         begin
           cxCalcEdit83.Value:=cxCalcEdit83.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit83.enabled:=true;
         end;
-        if ww(obor.FieldByName('wid').AsString)='hv' then
+        if ww(obor.FieldByName('wid').AsString)='kv' then
         begin
           cxCalcEdit84.Value:=cxCalcEdit84.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit84.enabled:=true;
         end;
-        if ww(obor.FieldByName('wid').AsString)='sm' then
+        if ww(obor.FieldByName('wid').AsString)='hv' then
+        begin
+          cxCalcEdit89.Value:=cxCalcEdit89.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit89.enabled:=true;
+        end;
+        if ww(obor.FieldByName('wid').AsString)='av' then
         begin
           cxCalcEdit85.Value:=cxCalcEdit85.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit85.enabled:=true;
         end;
-        if ww(obor.FieldByName('wid').AsString)='el' then
+        if ww(obor.FieldByName('wid').AsString)='sm' then
         begin
           cxCalcEdit86.Value:=cxCalcEdit86.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit86.enabled:=true;
         end;
-                if ww(obor.FieldByName('wid').AsString)='op' then
+        if ww(obor.FieldByName('wid').AsString)='el' then
         begin
           cxCalcEdit87.Value:=cxCalcEdit87.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit87.enabled:=true;
         end;
-                if ww(obor.FieldByName('wid').AsString)='ov' then
+        if ww(obor.FieldByName('wid').AsString)='op' then
         begin
           cxCalcEdit88.Value:=cxCalcEdit88.Value+obor.fieldbyname(dolg).AsCurrency;
           cxCalcEdit88.enabled:=true;
+        end;
+
+        if ww(obor.FieldByName('wid').AsString)='ov' then
+        begin
+          cxCalcEdit91.Value:=cxCalcEdit91.Value+obor.fieldbyname(dolg).AsCurrency;
+          cxCalcEdit91.enabled:=true;
         end;
 
         obor.Next;
@@ -2901,6 +2928,8 @@ begin
      repp(cxCalcEdit83.text,dxLayoutControl1Item29.caption);
   if cxCalcEdit84.Enabled then
      repp(cxCalcEdit84.text,dxLayoutControl1Item31.caption);
+  if cxCalcEdit89.Enabled then
+     repp(cxCalcEdit89.text,dxLayoutControl1Item15.caption);
   if cxCalcEdit85.Enabled then
      repp(cxCalcEdit85.text,dxLayoutControl1Item34.caption);
   if cxCalcEdit86.Enabled then
@@ -2909,6 +2938,8 @@ begin
      repp(cxCalcEdit87.text,dxLayoutControl1Item32.caption);
   if cxCalcEdit88.Enabled then
      repp(cxCalcEdit88.text,dxLayoutControl1Item33.caption);
+  if cxCalcEdit91.Enabled then
+     repp(cxCalcEdit91.text,dxLayoutControl1Item36.caption);
 
   frxReport6.Variables['dolg1']:=''''+dolgss[1]+'''';
   frxReport6.Variables['dolg2']:=''''+dolgss[2]+'''';
@@ -3044,7 +3075,8 @@ begin
                         cxCalcEdit75.Value + cxCalcEdit76.Value +
                         cxCalcEdit77.Value + cxCalcEdit83.Value +
                         cxCalcEdit84.Value + cxCalcEdit85.Value +
-                        cxCalcEdit86.Value + cxCalcEdit87.Value + cxCalcEdit88.Value;
+                        cxCalcEdit86.Value + cxCalcEdit87.Value +
+                        cxCalcEdit89.Value + cxCalcEdit88.Value + cxCalcEdit91.Value;
 end;
 
 procedure TForm1.cxButton4Click(Sender: TObject);

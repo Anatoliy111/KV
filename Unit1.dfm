@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 219
   Top = 107
   Caption = 'Form1'
-  ClientHeight = 617
-  ClientWidth = 810
+  ClientHeight = 657
+  ClientWidth = 803
   Color = clBtnFace
   Constraints.MinHeight = 499
   Constraints.MinWidth = 799
@@ -28,13 +28,15 @@ object Form1: TForm1
   object PageControl1: TcxPageControl
     Left = 0
     Top = 26
-    Width = 810
-    Height = 591
+    Width = 803
+    Height = 631
     ActivePage = TabSheet4
     Align = alClient
     TabOrder = 0
-    ClientRectBottom = 591
-    ClientRectRight = 810
+    ExplicitWidth = 810
+    ExplicitHeight = 591
+    ClientRectBottom = 631
+    ClientRectRight = 803
     ClientRectTop = 24
     object TabSheet1: TcxTabSheet
       Caption = #1044#1086#1074#1110#1076#1082#1072' '#1085#1072' '#1089#1091#1073#1089#1080#1076#1110#1102
@@ -869,10 +871,10 @@ object Form1: TForm1
         Width = 97
       end
       object cxGrid2: TcxGrid
-        Left = 634
+        Left = 627
         Top = 0
         Width = 176
-        Height = 567
+        Height = 607
         Align = alRight
         TabOrder = 62
         object cxGrid2DBTableView1: TcxGridDBTableView
@@ -964,14 +966,18 @@ object Form1: TForm1
       Caption = #1042#1080#1087#1080#1089#1082#1072
       ImageIndex = 3
       OnShow = TabSheet4Show
+      ExplicitWidth = 810
+      ExplicitHeight = 567
       object dxLayoutControl1: TdxLayoutControl
         Left = 0
         Top = 0
-        Width = 810
-        Height = 567
+        Width = 803
+        Height = 607
         Align = alClient
         TabOrder = 0
         TabStop = False
+        ExplicitWidth = 810
+        ExplicitHeight = 567
         object cxTextEdit2: TcxTextEdit
           Left = 10
           Top = 37
@@ -1146,13 +1152,13 @@ object Form1: TForm1
         end
         object cxDateEdit2: TcxDateEdit
           Left = 10
-          Top = 526
+          Top = 580
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
           Style.HotTrack = True
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 31
+          TabOrder = 33
           Width = 121
         end
         object cxCalcEdit78: TcxCalcEdit
@@ -1166,7 +1172,7 @@ object Form1: TForm1
           Style.HotTrack = True
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 30
+          TabOrder = 32
           Width = 121
         end
         object cxCalcEdit79: TcxCalcEdit
@@ -1190,7 +1196,7 @@ object Form1: TForm1
           Height = 25
           Caption = #1042#1080#1073#1088#1072#1090#1080
           Default = True
-          TabOrder = 26
+          TabOrder = 28
           OnClick = cxButton1Click
           LookAndFeel.Kind = lfStandard
         end
@@ -1216,7 +1222,7 @@ object Form1: TForm1
           Width = 74
           Height = 25
           Caption = #1055#1077#1088#1077#1075#1083#1103#1076
-          TabOrder = 28
+          TabOrder = 30
           OnClick = cxButton2Click
           LookAndFeel.Kind = lfStandard
         end
@@ -1226,7 +1232,7 @@ object Form1: TForm1
           Width = 74
           Height = 26
           Caption = #1044#1080#1079#1072#1081#1085#1077#1088
-          TabOrder = 29
+          TabOrder = 31
           OnClick = cxButton3Click
           LookAndFeel.Kind = lfStandard
         end
@@ -1236,13 +1242,13 @@ object Form1: TForm1
           Width = 74
           Height = 26
           Caption = #1044#1088#1091#1082
-          TabOrder = 27
+          TabOrder = 29
           OnClick = cxButton4Click
           LookAndFeel.Kind = lfStandard
         end
         object BuhgEdit1: TcxMRUEdit
           Left = 10
-          Top = 553
+          Top = 607
           AutoSize = False
           Properties.DropDownRows = 16
           Properties.ShowEllipsis = False
@@ -1251,7 +1257,7 @@ object Form1: TForm1
           Style.HotTrack = False
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 32
+          TabOrder = 34
           Height = 21
           Width = 177
         end
@@ -1294,7 +1300,7 @@ object Form1: TForm1
         end
         object KerEdit1: TcxMRUEdit
           Left = 10
-          Top = 580
+          Top = 634
           Properties.DropDownRows = 16
           Properties.ShowEllipsis = False
           Style.BorderColor = clWindowFrame
@@ -1302,7 +1308,7 @@ object Form1: TForm1
           Style.HotTrack = False
           Style.ButtonStyle = bts3D
           Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 33
+          TabOrder = 35
           Width = 177
         end
         object cxCalcEdit83: TcxCalcEdit
@@ -1337,21 +1343,6 @@ object Form1: TForm1
         end
         object cxCalcEdit85: TcxCalcEdit
           Left = 22
-          Top = 406
-          EditValue = 0.000000000000000000
-          Properties.Alignment.Horz = taRightJustify
-          Properties.DisplayFormat = '0.00'
-          Properties.OnChange = cxCalcEdit73PropertiesChange
-          Style.BorderColor = clWindowFrame
-          Style.BorderStyle = ebs3D
-          Style.HotTrack = False
-          Style.ButtonStyle = bts3D
-          Style.PopupBorderStyle = epbsFrame3D
-          TabOrder = 22
-          Width = 408
-        end
-        object cxCalcEdit86: TcxCalcEdit
-          Left = 22
           Top = 433
           EditValue = 0.000000000000000000
           Properties.Alignment.Horz = taRightJustify
@@ -1365,7 +1356,7 @@ object Form1: TForm1
           TabOrder = 23
           Width = 408
         end
-        object cxCalcEdit87: TcxCalcEdit
+        object cxCalcEdit86: TcxCalcEdit
           Left = 22
           Top = 460
           EditValue = 0.000000000000000000
@@ -1380,7 +1371,7 @@ object Form1: TForm1
           TabOrder = 24
           Width = 408
         end
-        object cxCalcEdit88: TcxCalcEdit
+        object cxCalcEdit87: TcxCalcEdit
           Left = 22
           Top = 487
           EditValue = 0.000000000000000000
@@ -1394,6 +1385,50 @@ object Form1: TForm1
           Style.PopupBorderStyle = epbsFrame3D
           TabOrder = 25
           Width = 408
+        end
+        object cxCalcEdit88: TcxCalcEdit
+          Left = 22
+          Top = 514
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
+          Properties.OnChange = cxCalcEdit73PropertiesChange
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 26
+          Width = 408
+        end
+        object cxCalcEdit89: TcxCalcEdit
+          Left = 22
+          Top = 406
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
+          Properties.OnChange = cxCalcEdit73PropertiesChange
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 22
+          Width = 408
+        end
+        object cxCalcEdit91: TcxCalcEdit
+          Left = 22
+          Top = 541
+          EditValue = 0.000000000000000000
+          Properties.Alignment.Horz = taRightJustify
+          Properties.DisplayFormat = '0.00'
+          Style.BorderColor = clWindowFrame
+          Style.BorderStyle = ebs3D
+          Style.HotTrack = False
+          Style.ButtonStyle = bts3D
+          Style.PopupBorderStyle = epbsFrame3D
+          TabOrder = 27
+          Width = 121
         end
         object dxLayoutControl1Group_Root: TdxLayoutGroup
           ShowCaption = False
@@ -1549,6 +1584,10 @@ object Form1: TForm1
                     Control = cxCalcEdit84
                     ControlOptions.ShowBorder = False
                   end
+                  object dxLayoutControl1Item15: TdxLayoutItem
+                    Control = cxCalcEdit89
+                    ControlOptions.ShowBorder = False
+                  end
                   object dxLayoutControl1Item34: TdxLayoutItem
                     Control = cxCalcEdit85
                     ControlOptions.ShowBorder = False
@@ -1563,6 +1602,10 @@ object Form1: TForm1
                   end
                   object dxLayoutControl1Item33: TdxLayoutItem
                     Control = cxCalcEdit88
+                    ControlOptions.ShowBorder = False
+                  end
+                  object dxLayoutControl1Item36: TdxLayoutItem
+                    Control = cxCalcEdit91
                     ControlOptions.ShowBorder = False
                   end
                 end
@@ -1625,16 +1668,16 @@ object Form1: TForm1
       object Panel1: TPanel
         Left = 0
         Top = 57
-        Width = 810
-        Height = 510
+        Width = 803
+        Height = 550
         Align = alClient
         Caption = 'Panel1'
         TabOrder = 0
         object cxGrid1: TcxGrid
           Left = 1
           Top = 1
-          Width = 808
-          Height = 508
+          Width = 801
+          Height = 548
           Align = alClient
           TabOrder = 0
           LookAndFeel.NativeStyle = False
@@ -1919,7 +1962,7 @@ object Form1: TForm1
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 810
+        Width = 803
         Height = 57
         Align = alTop
         TabOrder = 1
@@ -2215,7 +2258,7 @@ object Form1: TForm1
       object Panel3: TPanel
         Left = 0
         Top = 0
-        Width = 810
+        Width = 803
         Height = 57
         Align = alTop
         TabOrder = 0
@@ -3048,14 +3091,18 @@ object Form1: TForm1
     object cxTabSheet1: TcxTabSheet
       Caption = 'cxTabSheet1'
       ImageIndex = 4
+      ExplicitWidth = 810
+      ExplicitHeight = 567
       object dxLayoutControl2: TdxLayoutControl
         Left = 0
         Top = 0
-        Width = 810
-        Height = 567
+        Width = 803
+        Height = 607
         Align = alClient
         TabOrder = 0
         TabStop = False
+        ExplicitWidth = 810
+        ExplicitHeight = 567
         object cxTextEdit11: TcxTextEdit
           Left = 10
           Top = 64
